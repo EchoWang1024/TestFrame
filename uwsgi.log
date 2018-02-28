@@ -1,0 +1,53 @@
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 09:38:38 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 01 September 2017 14:10:06
+os: Linux-3.10.0-327.el7.x86_64 #1 SMP Thu Nov 19 22:10:57 UTC 2015
+nodename: localhost
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 56
+current working directory: /opt/test/xiangmu3/TestFrame
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /opt/test/xiangmu3/TestFrame/
+your processes number limit is 10240
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (192.168.128.54:8001).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.15 (64bit) on [Fri Nov  3 09:39:13 2017] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-4) on 01 September 2017 14:10:06
+os: Linux-3.10.0-327.el7.x86_64 #1 SMP Thu Nov 19 22:10:57 UTC 2015
+nodename: localhost
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 56
+current working directory: /opt/test/xiangmu3/TestFrame
+detected binary path: /usr/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /opt/test/xiangmu3/TestFrame/
+your processes number limit is 10240
+your memory page size is 4096 bytes
+detected max file descriptor number: 10240
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 192.168.128.54:8001 fd 3
+Python version: 2.7.5 (default, Nov 20 2015, 02:00:19)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-4)]
+Python main interpreter initialized at 0x24bf560
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x24bf560 pid: 175481 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 175481)
+spawned uWSGI worker 1 (pid: 175494, cores: 1)
+spawned uWSGI worker 2 (pid: 175495, cores: 1)
+spawned uWSGI worker 3 (pid: 175496, cores: 1)
+spawned uWSGI worker 4 (pid: 175497, cores: 1)

@@ -1,0 +1,144 @@
+  .main ul .l5 a{
+            color:#9EEFF2;
+            font-weight: bold;
+        }
+        form,table{
+            margin-left: 20px;
+        }
+         h1{
+            /*background-color:#E8E7E3;*/
+            color:#28262C;
+            text-align: left;
+             margin:5px 0px 5px 28px;
+            height:50px;
+            line-height: 50px;
+        }
+         hr{
+             margin: 0 auto;
+             border-top: 2px solid black;
+             width: 300px;
+             float:left;
+         }
+         .pachiralogo{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+         /*－－－－－－－－－－－－－－－－－－－－－－－－－－－*/
+
+        .bleft{
+            margin-top: 50px;
+            /*border:3px solid black;*/
+            margin-right: 20px;
+            height: 400px;
+            padding:10px;
+        }
+        .bleft1{
+            width:47%;
+            height: 95%;
+            /*background-color: #8B8D8E;*/
+            /*border-right: 3px solid black;*/
+            float:left;
+            padding:10px;
+        }
+
+        .url_text{
+            width:48%;
+            height: 95%;
+            /*background-color: gray;*/
+            float: right;
+            padding:10px;
+        }
+        .in1 ,.in2  ,.in4 ,.in5 ,.in6{
+            width: 360px;
+            height: 30px;
+            border:1px solid black;
+            border-radius: 4px;
+        }
+        .in3 {
+            width: 360px;
+            height: 36px;
+            border:1px solid black;
+            border-radius: 4px;
+        }
+        select{
+            width:150px;
+        }
+        /*----------------------------------------*/
+        .brigt{
+            position: absolute;
+            margin:0 auto;
+            border-bottom: 3px solid black;
+            padding-bottom:20px;
+            width:75%;
+        }
+        .brigt input{
+            width:100px;
+            height:30px;
+            color:black;
+            font-size: 15px;
+            border:0;
+            border-radius: 2px;
+            vertical-align: middle;
+            font-family: "AR PL UKai CN";
+        }
+        .mail_valid{
+            /*background-color: black;*/
+            width:200px;
+            height:30px;
+            line-height: 30px;
+            border:0;
+            border-radius: 2px;
+            float:right;
+            font-size: 18px;
+            margin-left: 5px;
+            padding-left: 20px;
+        }
+        .mail_valid input{
+            vertical-align: middle;
+            margin-top:6px;
+            width:15px;
+            height:15px
+        }
+        .mail_valid span{
+            color:black;
+            vertical-align: middle;
+            text-align: center;
+        }
+        /*-------------------------------------------*/
+        .bsum{
+            display: inline-block;
+        }
+        .add ,.minus{
+            width:40px;
+            height: 25px;
+            line-height: 22px;
+            font-size: 15px;
+            text-align: center;
+            vertical-align: center;
+            margin:0;
+            background-color: black;
+            color:white;
+            border:0;
+            border-radius: 2px;
+        }
+        /*------------------------------------------------*/
+        .inp_error{
+            color:red;
+            text-align: left;
+            margin-left: 20px;
+            font-size: 13px;
+            width:200px;
+            display: inline-block;
+        }
+        .inp_error1{
+            color:red;
+            text-align: left;
+            margin-left: 20px;
+            font-size: 13px;
+            display: inline-block;
+        }
+        .ill{
+            display: inline-block;
+            width:130px;
+        }

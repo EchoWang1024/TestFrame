@@ -1,0 +1,231 @@
+{%extends 'base.html'%}
+{%block head%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试任务管理</title>
+    <link href="/static/css/testcase.css" rel="stylesheet" href="text/css">
+    <link href="/static/css/sidebar.css" rel="stylesheet" href="text/css">
+    <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+        var sel_valid= "false";
+        $(function () {
+            $(".subsel").click(function () {
+                if (sel_valid=="false"){
+                    $("input[type='checkbox']").prop("checked", true);
+                    sel_valid="true"
+                }
+                else {
+                    $("input[type='checkbox']").prop("checked", false);
+                    sel_valid="false"
+                }
+            });
+        });
+	</script>
+</head>
+<body>
+{%endblock head%}
+
+{%block body%}
+<div class="ciyao">
+<h1>测 试 任 务 管 理</h1>
+<hr>
+<br>
+<br>
+<br>
+
+	<form action='/test_case_handle1/' method='post' class="findone">
+		<input type="text" name="table_name" placeholder="输入测试表格名称" class="inone">
+		<input type="submit" value='查询' class="subone">
+	</form>
+	<br><br>
+
+    {%if valid|default:"0" == "0"%}
+        <form action="/test_case_del/" method='post' style="margin: 0 auto;" >
+            <table border=1>
+            <tr class="tab_title">
+                <td>测试表格名称</td>
+                <td>测试路径</td>
+                <td>用例管理</td>
+                <td style="width:150px">
+                    <input type="button" class="subsel" value="全选">
+                    <input type="submit" class="subdel" value="删除">
+                </td>
+            </tr>
+            {%for i in list%}
+                <tr>
+                    <td>{{i.table_name}}</td>
+                    <td>{{i.table_path}}</td>
+                    <td class="function">
+                        <a href="http://192.168.128.54/htmlcase/{{i.table_name}}.html">预览</a>&nbsp;
+                        <a href='/case/{{i.table_name}}/' target="_blank">下载</a>&nbsp;
+                        <a href='/del/{{i.table_name}}/' class="del">删除</a>
+                    </td>
+                    <td style="width:150px">
+                        <input type="checkbox" name="table_name"  value={{ i.table_name }}>
+                    </td>
+                </tr>
+            {%endfor%}
+            </table>
+        </form>
+
+        <br>
+        <div class="page">
+            {%if plast != ''%}
+                {%if list.has_previous%}
+                    <div class = 'pagenum1'><a href="/test_case_handle1/">首 页</a></div>
+                    <div class = 'pagenum1'><a href="/test_case_handle{{list.number|add:-1}}/">上一页</a></div>
+                {%endif%}
+                {%if Pindex == 1%}
+                    <div class = "pagenum pagestyle" >1</div>
+                    <div class = 'pagenum'><a href="/test_case_handle2/">2</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle3/">3</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle4/">4</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle5/">5</a></div>
+                    <div class = "pagenum " >...</div>
+                {%elif Pindex == 2%}
+                    <div class = 'pagenum'><a href="/test_case_handle1/">1</a></div>
+                    <div class = "pagenum pagestyle" >2</div>
+                    <div class = 'pagenum'><a href="/test_case_handle3/">3</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle4/">4</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle5/">5</a></div>
+                    <div class = "pagenum " >...</div>
+                {%elif Pindex == plast%}
+                    <div class = "pagenum " >...</div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast|add:-4}}/">{{plast|add:-4}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast|add:-3}}/">{{plast|add:-3}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast|add:-2}}/">{{plast|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast|add:-1}}/">{{plast|add:-1}}</a></div>
+                    <div class = 'pagenum'>{{plast}}</div>
+                {%elif Pindex == plast2%}
+                    <div class = "pagenum " >...</div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast2|add:-3}}/">{{plast2|add:-3}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast2|add:-2}}/">{{plast2|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast2|add:-1}}/">{{plast2|add:-1}}</a></div>
+                    <div class = 'pagenum'>{{plast2}}</div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast2|add:+1}}/">{{plast2|add:+1}}</a></div>
+                {%else%}
+                    {%if Pindex != 3 %}
+                        <div class = "pagenum " >...</div>
+                    {%endif%}
+                    <div class = 'pagenum'><a href="/test_case_handle{{Pindex|add:-2}}/">{{Pindex|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{Pindex|add:-1}}/">{{Pindex|add:-1}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{Pindex}}/">{{Pindex}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{Pindex|add:+1}}/">{{Pindex|add:+1}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{Pindex|add:+2}}/">{{Pindex|add:+2}}</a></div>
+                    {%if Pindex != plast|add:-2%}
+                        <div class = "pagenum " >...</div>
+                    {%endif%}
+                {%endif%}
+                {%if list.has_next%}
+                    <div class = 'pagenum1'><a href="/test_case_handle{{list.number|add:1}}/">下一页</a></div>
+                    <div class = 'pagenum1'><a href="/test_case_handle{{list.paginator.num_pages}}/">尾 页</a></div>
+                {%endif%}
+            {%else%}
+                {%for pindex in plist%}
+                    {%if Pindex == pindex%}
+                        <div class = "pagenum pagestyle" >{{pindex}}</div>
+                    {%else%}
+                        <div class = 'pagenum'><a href="/test_case_handle{{pindex}}/">{{pindex}}</a></div>
+                    {%endif%}
+                {%endfor%}
+            {%endif%}
+        </div>
+{#        条件查询#}
+    {%else%}
+        <form action="/test_case_del/" method='post' style="margin: 0 auto;" >
+            <table border=1>
+            <tr class="tab_title">
+                <td>测试表格名称</td>
+                <td>测试路径</td>
+                <td>用例管理</td>
+                <td style="width:150px">
+                    <input type="button" class="subsel" value="全选">
+                    <input type="submit" class="subdel" value="删除">
+                </td>
+            </tr>
+            {%for i in list%}
+                <tr>
+                    <td>{{i.table_name}}</td>
+                    <td>{{i.table_path}}</td>
+                    <td class="function">
+                        <a href="http://192.168.128.54/htmlcase/{{i.table_name}}.html">预览</a>&nbsp;
+                        <a href='/case/{{i.table_name}}/' target="_blank">下载</a>&nbsp;
+                        <a href='/del/{{i.table_name}}/' class="del">删除</a>
+                    </td>
+                    <td style="width:150px">
+                        <input type="checkbox" name="table_name"  value={{ i.table_name }}>
+                    </td>
+                </tr>
+            {%endfor%}
+            </table>
+        </form>
+        <br>
+        <div class="page">
+            {%if plast != ''%}
+                {%if list.has_previous%}
+                    <div class = 'pagenum1'><a href="/test_case_handle1/">首 页</a></div>
+                    <div class = 'pagenum1'><a href="/test_case_handle{{list.number|add:-1}}/">上一页</a></div>
+                {%endif%}
+                {%if Pindex == 1%}
+                    <div class = "pagenum pagestyle" >1</div>
+                    <div class = 'pagenum'><a href="/test_case_handle2/">2</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle3/">3</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle4/">4</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle5/">5</a></div>
+                    <div class = "pagenum " >...</div>
+                {%elif Pindex == 2%}
+                    <div class = 'pagenum'><a href="/test_case_handle1/">1</a></div>
+                    <div class = "pagenum pagestyle" >2</div>
+                    <div class = 'pagenum'><a href="/test_case_handle3/">3</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle4/">4</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle5/">5</a></div>
+                    <div class = "pagenum " >...</div>
+                {%elif Pindex == plast%}
+                    <div class = "pagenum " >...</div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast|add:-4}}/">{{plast|add:-4}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast|add:-3}}/">{{plast|add:-3}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast|add:-2}}/">{{plast|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast|add:-1}}/">{{plast|add:-1}}</a></div>
+                    <div class = 'pagenum'>{{plast}}</div>
+                {%elif Pindex == plast2%}
+                    <div class = "pagenum " >...</div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast2|add:-3}}/">{{plast2|add:-3}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast2|add:-2}}/">{{plast2|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast2|add:-1}}/">{{plast2|add:-1}}</a></div>
+                    <div class = 'pagenum'>{{plast2}}</div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{plast2|add:+1}}/">{{plast2|add:+1}}</a></div>
+                {%else%}
+                    {%if Pindex != 3 %}
+                        <div class = "pagenum " >...</div>
+                    {%endif%}
+                    <div class = 'pagenum'><a href="/test_case_handle{{Pindex|add:-2}}/">{{Pindex|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{Pindex|add:-1}}/">{{Pindex|add:-1}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{Pindex}}/">{{Pindex}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{Pindex|add:+1}}/">{{Pindex|add:+1}}</a></div>
+                    <div class = 'pagenum'><a href="/test_case_handle{{Pindex|add:+2}}/">{{Pindex|add:+2}}</a></div>
+                    {%if Pindex != plast|add:-2%}
+                        <div class = "pagenum " >...</div>
+                    {%endif%}
+                {%endif%}
+                {%if list.has_next%}
+                    <div class = 'pagenum1'><a href="/test_case_handle{{list.number|add:1}}/">下一页</a></div>
+                    <div class = 'pagenum1'><a href="/test_case_handle{{list.paginator.num_pages}}/">尾 页</a></div>
+                {%endif%}
+            {%else%}
+                {%for pindex in plist%}
+                    {%if Pindex == pindex%}
+                        <div class = "pagenum pagestyle" >{{pindex}}</div>
+                    {%else%}
+                        <div class = 'pagenum'><a href="/test_case_handle{{pindex}}/">{{pindex}}</a></div>
+                    {%endif%}
+                {%endfor%}
+            {%endif%}
+        </div>
+    {%endif%}
+</div>
+
+</body>
+</html>
+{%endblock body%}

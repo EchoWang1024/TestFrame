@@ -1,0 +1,51 @@
+/*格式初始化*/
+body{
+    margin:0;
+    font-family: 'MS Sans Serif', sans-serif, Verdana, Arial;
+}
+a{
+    text-decoration: none;
+}
+/*头部*/
+.head{
+    height:20px;
+    background-color: darkblue;
+}
+.head .head_title{
+    color:white;
+    font-size: 15px;
+    float:left;
+    margin-left: 20px;
+    vertical-align: center;
+    font-weight: bold;
+}
+.head .head_version{
+    color:white;
+    font-size: 15px;
+    float:right;
+    margin-right: 20px;
+    vertical-align: center;
+    font-weight: bold;
+}
+/*中部*/
+.middle{
+    height: 40px;
+    background-color: dodgerblue;
+    padding: 0 20px;
+}
+.middle a{
+    display: inline-block;
+    color:white;
+    height:40px;
+    line-height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.middle a:hover{
+    background-color: blue;
+}
+/*主要区域*/
+.foot{
+    height:800px;
+    /*background-color: green;*/
+}

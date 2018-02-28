@@ -1,0 +1,124 @@
+       a{
+            text-decoration: none;
+        }
+       .main ul .l2 a{
+            color:#9EEFF2;
+            font-weight: bold;
+        }
+         h1{
+            /*background-color:#E8E7E3;*/
+            color:#28262C;
+            text-align: left;
+             margin:5px 0px 5px 28px;
+            height:50px;
+            line-height: 50px;
+        }
+         hr{
+             margin: 0 auto;
+             border-top: 2px solid black;
+             width: 300px;
+             float:left;
+         }
+        form{
+            margin-left: 30px;
+            display: inline-block;
+        }
+        .findone{
+            border:1px solid black;
+            border-radius: 2px;
+        }
+		table{
+			border-collapse:collapse;
+			text-align: center;
+            margin-left: 30px;
+		}
+        .page{
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        .pagenum{
+            width: 20px;
+            height:20px;
+            border:1px solid black;
+            float:left;
+            margin-left:10px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .pagenum1{
+            width: 60px;
+            height:20px;
+            border:1px solid black;
+            float:left;
+            margin-left:10px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .pagenum a {
+            text-decoration: none;
+            display: block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+         .pagenum1 a {
+            text-decoration: none;
+            display: block;
+            width: 60px;
+            height: 20px;
+            text-align: center;
+        }
+        .pagestyle{
+            background-color:gray;
+        }
+        .inone{
+            width:450px;
+            height:35px;
+            vertical-align:center;
+            border:0;
+            outline: none;
+            padding-left:10px;
+            background: url("/static/images/fangda.png") no-repeat right;
+        }
+        .subone{
+            font-size: 20px;
+            width:100px;
+            height:40px;
+            border-radius:2px;
+            background-color:#8B8D8E;
+            color:white;
+            vertical-align:bottom;
+            outline: none;
+            border:0;
+            font-family: "AR PL UKai CN";
+        }
+        .tab_title{
+            background-color: #28262C;
+            color:white;
+        }
+        .function a{
+            color:black;
+            /*background-color: #8B8D8E;*/
+            border-radius: 2px;
+            display: inline-block;
+            width:40px;
+            height:25px;
+        }
+        .function a:hover{
+            color:blue;
+            /*background-color: black;*/
+        }
+        td{
+            padding: 5px 10px;
+            font-size: 16px;
+		}
+        .subdel, .subsel{
+            color:white;
+            background-color: #28262C;
+            border: 0;
+            font-family: "AR PL UKai CN";
+            font-size: 18px;
+        }
+        .subsel:hover, .subdel:hover{
+            color:red;
+        }

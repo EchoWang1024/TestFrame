@@ -1,0 +1,88 @@
+       .main ul .l3 a{
+            color:#9EEFF2;
+            font-weight: bold;
+        }
+         h1{
+            /*background-color:#E8E7E3;*/
+            color:#28262C;
+            text-align: left;
+             margin:5px 0px 5px 28px;
+            height:50px;
+            line-height: 50px;
+        }
+         hr{
+             margin: 0 auto;
+             border-top: 2px solid black;
+             width: 300px;
+             float:left;
+         }
+        form{
+            margin-top: 50px;
+            margin-left: 30px;
+        }
+        /*.file{*/
+            /*border:1px solid black;*/
+            /*width:500px;*/
+        /*}*/
+        .d1{
+            height:20px;
+            width:800px;
+            border:2px solid gray;
+            float:left;
+            margin-right:10px;
+            border-radius: 5px;
+        }
+        .d2{
+            height:100%;
+            width:0%;
+            background:blue;
+        }
+        b{
+            margin-right:20px;
+        }
+        .main{
+            width: 200px;
+            height:470px;
+            border-right:1px solid black;
+            float:left;
+            position: fixed;
+        }
+        .ciyao{
+            float:right;
+            width:1000px;
+            height:470px;
+        }
+        .file {
+            padding: 4px 10px;
+            height: 25px;
+            line-height: 25px;
+            position: relative;
+            cursor: pointer;
+            color: #888;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            display: inline-block;
+            *display: inline;
+            *zoom: 1;
+            font-family: "AR PL UKai CN";
+        }
+
+        .file:hover {
+            color: #444;
+            background: #eee;
+            border-color: #ccc;
+            text-decoration: none
+        }
+
+        .subone{
+            font-size: 20px;
+            width:200px;
+            height:40px;
+            border-radius:5px;
+            background-color:#8B8D8E;
+            color:white;
+            vertical-align:center;
+            font-family: "AR PL UKai CN";
+        }

@@ -1,0 +1,58 @@
+{%extends 'base.html'%}
+{%block head%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试平台</title>
+    <link href="/static/css/sidebar.css" rel="stylesheet" href="text/css">
+    <style>
+        .l1 a{
+            color:#9FC4E7;
+        }
+        h1{
+            font-size: 2.75em;
+            font-weight:bold;
+            color:#312450;
+            margin-top:70px;
+            margin-left:50px;
+        }
+        p{
+            font-size: 1.25em;
+            display: block;
+            margin-left:50px;
+            color:#312450;
+        }
+        .logo{
+            margin-left:37px;
+        }
+    </style>
+</head>
+<body>
+{%endblock head%}
+
+{%block body%}
+
+<div class="ciyao">
+
+    <h1>自 动 化 测 试 平 台</h1>
+    <p>
+        自动化测试平台，是执行测试和管理测试的平台，包括:
+        <br>
+        测试流程管理，测试用例管理，测试资源管理，测试报告管理。
+        <br>
+        <br>
+        -- 若平台界面效果bug,请清掉本地缓存数据.
+        <br>
+        -- 推荐使用谷歌浏览器(6.0版本以上)
+        <br>
+        -- 当前版本2.0...
+        <br>
+        <a href="/testframe_log/">-- log</a>
+    </p>
+
+</div>
+</body>
+</html>
+
+{%endblock body%}

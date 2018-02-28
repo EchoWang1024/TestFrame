@@ -1,0 +1,79 @@
+{%extends 'base.html'%}
+{%block head%}
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>执行测试</title>
+    <link href="/static/css/execut_test.css" rel="stylesheet" href="text/css">
+    <link href="/static/css/sidebar.css" rel="stylesheet" href="text/css">
+    <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/static/js/Execution_test.js"></script>
+</head>
+<body>
+{%endblock head%}
+
+{%block body%}
+<div class="ciyao">
+    <h1 >测 试 任 务 执 行</h1>
+    <hr>
+    <br>
+    <form action="/test_start/" method="post" class='reg_form' enctype="application/json"><br>
+        <div class="brigt">
+            <input type="submit" value="开始测试" class="btn" id="btn_sub">
+            <input type="reset" value="清空" class="btn">
+            <div class="mail_valid">
+                <span>发送邮件:</span>
+                <input type="checkbox" name="mail_valid" value="0">
+            </div>
+        </div>
+        <div class="bleft">
+            <div class="bleft1">
+                <div>
+                    <div style="font-size: 20px; font-weight:bold;margin-bottom: 5px" class="ill">版本号:</div> <div class="inp_error">&nbsp;</div>
+                    <input type="text" class=in1 name="version" >
+                </div>
+                <br>
+                <div>
+                    <div style="font-size: 20px; font-weight:bold;margin-bottom: 5px; margin-top: 5px" class="ill">表格名称:</div> <div class="inp_error">&nbsp;</div>
+                    <select name="tablename" class="in3">
+                    <option class= "table_name"> </option>
+                        {% for i in table %}
+                            <option class= "table_name" value={{i.table_name}}>{{ i.table_name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <br>
+                <div style="display: none">
+                    <div style="font-size: 20px; font-weight:bold;margin-bottom: 5px; margin-top: 5px" class="ill">sheet名称:</div> <div class="inp_error">&nbsp;</div>
+                    <select name="sheetname" class="in6">
+                        <option value="sheet_all">sheet</option>
+                    </select>
+                </div>
+                <div>
+                    <div style="font-size: 20px; font-weight:bold;margin-bottom: 5px;margin-top: 5px" class="ill">用例ID:</div> <div class="inp_error">&nbsp;</div>
+                    <input type="text" class=in2 name="caseid" disabled="disabled" >
+                </div>
+                <br>
+                <div>
+                    <div style="font-size: 20px; font-weight:bold;margin-bottom: 5px;margin-top:5px" class="ill">执行次数:</div> <div class="inp_error">&nbsp;</div>
+                    <input type="text" class=in4 name="times" >
+                </div>
+            </div>
+            <div class="url_text">
+                <div style="font-size: 20px; font-weight:bold;margin-bottom: 5px;" class="ill">文件下载地址:</div> <div class="inp_error1">&nbsp;</div>
+                <input type="text" class="in5" name="url" disabled="disabled">
+                <div class="bsum">
+                    <input type="button" value="+" class="add" disabled="disabled">
+                    <input type="button" value="-" class="minus" disabled="disabled">
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <img src="/static/images/pachiraLOGO.png" alt="logo" class="pachiralogo">
+</div>
+
+</body>
+</html>
+{%endblock body%}

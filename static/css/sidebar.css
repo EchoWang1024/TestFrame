@@ -1,0 +1,59 @@
+      html{
+          height: 100%;
+      }
+      body{
+          padding: 0;
+          margin:0;
+          height: 100%;
+          font-family: "AR PL UKai TW";
+          /*font-weight: bold;*/
+          font-size: 18px;
+      }
+      /*main下*/
+      .main{
+            width: 20%;
+            height:100%;
+            padding-top:44px;
+            float:left;
+            position: fixed;
+            background-color: #28262C;
+        }
+      .main img{
+          margin-left: 30px;
+      }
+      .main a{
+          color:white;
+          font-size:20px;
+          text-decoration: none;
+      }
+      .main ul{
+          padding: 0;
+      }
+      .main li{
+          list-style: none;
+          height:50px;
+          line-height: 50px;
+          padding-left: 40px;
+          margin-bottom: 10px;
+      }
+      .main li a{
+          display: block;
+          width:100%;
+          height:50px;
+
+      }
+      .main li:hover{
+          background-color: #8B8D8E;
+      }
+      .main li a:hover{
+          color:#28262C;
+      }
+
+      .main hr{
+          width:255px;
+      }
+      .ciyao{
+            float:right;
+            width:80%;
+            height:100%;
+      }

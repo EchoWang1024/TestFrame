@@ -1,0 +1,134 @@
+        .main ul .l4 a{
+            color:#9EEFF2;
+            font-weight: bold;
+        }
+        .task_table a{
+            text-decoration: none;
+            color:black;
+        }
+        .task_table a:hover{
+            color:red;
+        }
+        .page,form,table{
+            margin-left: 30px;
+        }
+         h1{
+            /*background-color:#E8E7E3;*/
+            color:#28262C;
+            text-align: left;
+             margin:5px 0px 5px 28px;
+            height:50px;
+            line-height: 50px;
+        }
+         hr{
+             margin: 0 auto;
+             border-top: 2px solid black;
+             width: 300px;
+             float:left;
+         }
+		table{
+			border-collapse:collapse;
+			text-align: center;
+            font-size: 13px;
+            margin-top:-5px;
+            width:95%;
+		}
+		td{
+			padding:3px;
+		}
+        .pagenum{
+            width: 20px;
+            height:20px;
+            /*border:1px solid black;*/
+            float:left;
+            margin-left:10px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .pagenum1{
+            width: 60px;
+            height:20px;
+            /*border:1px solid black;*/
+            float:left;
+            margin-left:10px;
+            text-align: center;
+            line-height: 20px;
+        }
+        .pagenum a {
+            text-decoration: none;
+            display: block;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+         .pagenum1 a {
+            text-decoration: none;
+            display: block;
+            width: 60px;
+            height: 20px;
+            text-align: center;
+        }
+        .pagestyle{
+            background-color:gray;
+            color:red;
+        }
+        .statepull{
+            width:174px;
+        }
+        .query{
+            background-color: black;
+            width:94%;
+            font-size: 14px;
+            color:white;
+            padding:5px;
+            border:1px solid #8B8D8E;
+        }
+        .query .subone{
+            font-size: 17px;
+            width:80px;
+            height:20px;
+            line-height: 20px;
+            border:0;
+            border-radius:5px;
+            background-color:#8B8D8E;
+            color:white;
+            vertical-align: bottom;
+        }
+        .query input{
+            width:100px;
+            margin:5px;
+            border-radius: 2px;
+            border:0;
+            font-family: "AR PL UKai CN";
+            height:20px;
+        }
+        select{
+            margin: 0;
+            border-radius: 2px;
+            font-size: 14px;
+            width:50px;
+            height:20px;
+            line-height: 20px;
+            font-family: "AR PL UKai CN";
+        }
+        .page{
+            margin-top: -10px;
+        }
+        /*表格宽度*/
+        .table_title{
+            background-color: black;
+            color:white;
+        }
+        .teststop{
+            /*border-radius: 15px;*/
+            /*width:15px;*/
+            /*height:15px;*/
+            /*background-color: green;*/
+            border: 0;
+            outline: none;
+            font-family: "AR PL UKai CN";
+        }
+        .teststop:hover{
+            background-color: red;
+            cursor: pointer;
+        }

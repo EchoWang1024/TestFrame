@@ -1,0 +1,326 @@
+{%extends 'base.html'%}
+{%block head%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>测试任务管理</title>
+    <link rel="stylesheet" href="/static/css/testtask.css" type="text/css">
+    <link href="/static/css/sidebar.css" rel="stylesheet" href="text/css">
+    <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+        $(function () {
+            $('.teststop').click(function () {
+                for(var i=0;i<3;i++)
+                {
+                    $.get('/thread_kill/', {"test_id":$(this).parents().siblings(".testid").html()})
+                }
+            });
+        });
+		if('{{valid}}' =='0')
+		{
+			alert('未查询到数据')
+		}
+	</script>
+</head>
+<body>
+{%endblock head%}
+
+{%block body%}
+<div class="ciyao">
+<h1>测 试 任 务 管 理</h1>
+<hr>
+<br>
+	<form action='/test_task_handle1/' method='post' class="query">
+        <span>进行状态:</span>
+		<select name="state" class="statepull">
+            <option></option>
+            <option value="1">进行中</option>
+            <option value="2">已完成</option>
+            <option value="3">已终止</option>
+        </select>
+		<input type="text" name="table_name" placeholder="表格名称">
+		<input type="text" name="entry_name" placeholder="项目名称">
+		<input type="text"  name="test_id" placeholder="测试id">
+		<input type="text"  name="case_id" placeholder="用例id">
+		<input type="text" name="version_num" placeholder="版本号">
+		<input type="submit" value='查询' class="subone">
+	</form>
+	<br><br>
+
+    {%if valid|default:"0" == "0"%}
+        <table border=1>
+		<tr class="table_title">
+			<td>测试ID</td>
+			<td>项目名称</td>
+			<td>测试表格名称</td>
+			<td>用例ID</td>
+			<td>版本号</td>
+            <td>测试执行时间</td>
+			<td>测试状态</td>
+            <td>测试进度</td>
+			<td>测试报告</td>
+            <td>错误返回结果</td>
+            </tr>
+        {%for i in list%}
+            <tr class="task_table">
+                <td class="testid">{{i.test_id }}</td>
+                <td>{{i.entry_name}}</td>
+                <td>{{i.table_name}}</td>
+                <td>{{i.case_id}}</td>
+                <td class="version">{{i.version_num}}</td>
+                <td>{{i.start_time}}</td>
+                {%if i.state == '2'%}
+                    <td style="color:green">已完成</td>
+                    <td>全部完成</td>
+                    <td>
+                        <a href="http://192.168.128.54/report/{{i.test_id}}report_gbk.txt">预览</a>&nbsp;
+                        {%if i.entry_name == "nlu"%}
+                            <a href='/nlu{{i.test_id}}' target="_blank">out文件下载</a>
+                        {%else%}
+                            <a href='/{{i.test_id}}' target="_blank">下载</a>
+                        {%endif%}
+                    </td>
+                {%elif i.state == '3'%}
+                    <td style="color:red">已终止</td>
+                    <td>{{ i.speed }}</td>
+                    <td>
+                        <a href="http://192.168.128.54/report/{{i.test_id}}report_gbk.txt">预览</a>&nbsp;
+                        {%if i.entry_name == "nlu"%}
+                            <a href='/nlu{{i.test_id}}' target="_blank">out文件下载</a>
+                        {%else%}
+                            <a href='/{{i.test_id}}' target="_blank">下载</a>
+                        {%endif%}
+		            </td>
+                {%elif i.state == '1'%}
+                    <td>进行中 <input type="button" value="终止" class="teststop"></td>
+                    <td>{{ i.speed }}</td>
+                    <td>-----</td>
+                {%elif i.state == '0'%}
+                    <td>未开始</td>
+                    <td>0%</td>
+                    <td>-----</td>
+                {%elif i.state == '4'%}
+                    <td>等待中</td>
+                    <td>0%</td>
+                    <td>-----</td>
+                {%endif%}
+                <td>
+                    {%if i.entry_name == "nlp" and i.state == "2"%}
+                        <a href="http://192.168.128.54/report/{{i.test_id}}report_flog.txt">预览</a>&nbsp;
+                        <a href='/nlpflog{{i.test_id}}' target="_blank">下载</a>
+                    {% elif i.entry_name == "nlp" and i.state == "3"%}
+                        <a href="http://192.168.128.54/report/{{i.test_id}}report_flog.txt">预览</a>&nbsp;
+                        <a href='/nlpflog{{i.test_id}}' target="_blank">下载</a>
+                    {% else %}
+                        -----
+                    {% endif %}
+                </td>
+            </tr>
+        {%endfor%}
+{#        分页#}
+        </table>
+        <br><br>
+        <div class="page">
+            {%if plast != ''%}
+                {%if list.has_previous%}
+                    <div class = 'pagenum1'><a href="/test_task_handle1/">首 页</a></div>
+                    <div class = 'pagenum1'><a href="/test_task_handle{{list.number|add:-1}}/">上一页</a></div>
+                {%endif%}
+                {%if Pindex == 1%}
+                    <div class = "pagenum pagestyle" >1</div>
+                    <div class = 'pagenum'><a href="/test_task_handle2/">2</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle3/">3</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle4/">4</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle5/">5</a></div>
+                    <div class = "pagenum " >...</div>
+                {%elif Pindex == 2%}
+                    <div class = 'pagenum'><a href="/test_task_handle1/">1</a></div>
+                    <div class = "pagenum pagestyle" >2</div>
+                    <div class = 'pagenum'><a href="/test_task_handle3/">3</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle4/">4</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle5/">5</a></div>
+                    <div class = "pagenum " >...</div>
+                {%elif Pindex == plast%}
+                    <div class = "pagenum " >...</div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast|add:-4}}/">{{plast|add:-4}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast|add:-3}}/">{{plast|add:-3}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast|add:-2}}/">{{plast|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast|add:-1}}/">{{plast|add:-1}}</a></div>
+                    <div class = 'pagenum pagestyle'>{{plast}}</div>
+                {%elif Pindex == plast2%}
+                    <div class = "pagenum " >...</div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast2|add:-3}}/">{{plast2|add:-3}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast2|add:-2}}/">{{plast2|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast2|add:-1}}/">{{plast2|add:-1}}</a></div>
+                    <div class = 'pagenum pagestyle'>{{plast2}}</div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast2|add:+1}}/">{{plast2|add:+1}}</a></div>
+                {%else%}
+                    {%if Pindex != 3 %}
+                        <div class = "pagenum " >...</div>
+                    {%endif%}
+                    <div class = 'pagenum'><a href="/test_task_handle{{Pindex|add:-2}}/">{{Pindex|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{Pindex|add:-1}}/">{{Pindex|add:-1}}</a></div>
+                    <div class = 'pagenum pagestyle'><a href="/test_task_handle{{Pindex}}/">{{Pindex}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{Pindex|add:+1}}/">{{Pindex|add:+1}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{Pindex|add:+2}}/">{{Pindex|add:+2}}</a></div>
+                    {%if Pindex != plast|add:-2%}
+                        <div class = "pagenum " >...</div>
+                    {%endif%}
+                {%endif%}
+                {%if list.has_next%}
+                    <div class = 'pagenum1'><a href="/test_task_handle{{list.number|add:1}}/">下一页</a></div>
+                    <div class = 'pagenum1'><a href="/test_task_handle{{list.paginator.num_pages}}/">尾 页</a></div>
+                {%endif%}
+            {%else%}
+                {%for pindex in plist%}
+                    {%if Pindex == pindex%}
+                        <div class = "pagenum pagestyle" >{{pindex}}</div>
+                    {%else%}
+                        <div class = 'pagenum'><a href="/test_task_handle{{pindex}}/">{{pindex}}</a></div>
+                    {%endif%}
+                {%endfor%}
+            {%endif%}
+        </div>
+    {%else%}
+        <table border=1>
+		<tr class="table_title">
+			<td>测试ID</td>
+			<td>项目名称</td>
+			<td>测试表格名称</td>
+			<td>用例ID</td>
+			<td>版本号</td>
+            <td>测试执行时间</td>
+			<td>测试状态</td>
+            <td>测试进度</td>
+			<td>测试报告</td>
+            <td>错误返回结果</td>
+		</tr>
+        {%for i in list%}
+            <tr class="task_table">
+                <td class="testid">{{i.test_id }}</td>
+                <td>{{i.entry_name}}</td>
+                <td>{{i.table_name}}</td>
+                <td>{{i.case_id}}</td>
+                <td class="version">{{i.version_num}}</td>
+                <td>{{i.start_time}}</td>
+                {%if i.state == '2'%}
+                    <td style="color:green">已完成</td>
+                    <td>全部完成</td>
+                    <td>
+                        <a href="http://192.168.128.54/report/{{i.test_id}}report_gbk.txt">预览</a>&nbsp;
+                        {%if i.entry_name == "nlu"%}
+                            <a href='/nlu{{i.test_id}}' target="_blank">out文件下载</a>
+                        {%else%}
+                            <a href='/{{i.test_id}}' target="_blank">下载</a>
+                        {%endif%}
+                    </td>
+                {%elif i.state == '3'%}
+                    <td style="color:red">已终止</td>
+                    <td>{{ i.speed }}</td>
+                    <td>
+                        <a href="http://192.168.128.54/report/{{i.test_id}}report_gbk.txt">预览</a>&nbsp;
+                        {%if i.entry_name == "nlu"%}
+                            <a href='/nlu{{i.test_id}}' target="_blank">out文件下载</a>
+                        {%else%}
+                            <a href='/{{i.test_id}}' target="_blank">下载</a>
+                        {%endif%}
+		            </td>
+                {%elif i.state == '1'%}
+                    <td>进行中 <input type="button" value="终止" class="teststop"></td>
+                    <td>{{ i.speed }}</td>
+                    <td>-----</td>
+                {%elif i.state == '0'%}
+                    <td>未开始</td>
+                    <td>0%</td>
+                    <td>-----</td>
+                {%elif i.state == '4'%}
+                    <td>等待中</td>
+                    <td>0%</td>
+                    <td>-----</td>
+                {%endif%}
+                <td>
+                    {%if i.entry_name == "nlp" and i.state == "2"%}
+                        <a href="http://192.168.128.54/report/{{i.test_id}}report_flog.txt">预览</a>&nbsp;
+                        <a href='/nlpflog{{i.test_id}}' target="_blank">下载</a>
+                    {% elif i.entry_name == "nlp" and i.state == "3"%}
+                        <a href="http://192.168.128.54/report/{{i.test_id}}report_flog.txt">预览</a>&nbsp;
+                        <a href='/nlpflog{{i.test_id}}' target="_blank">下载</a>
+                    {% else %}
+                        -----
+                    {% endif %}
+                </td>
+            </tr>
+        {%endfor%}
+        </table>
+        <br>
+        <div class="page">
+    {#        中间页码#}
+            {%if plast != ''%}
+                {%if list.has_previous%}
+                    <div class = 'pagenum1'><a href="/test_task_handle1/">首 页</a></div>
+                    <div class = 'pagenum1'><a href="/test_task_handle{{list.number|add:-1}}/">上一页</a></div>
+                {%endif%}
+                {%if Pindex == 1%}
+                    <div class = "pagenum pagestyle" >1</div>
+                    <div class = 'pagenum'><a href="/test_task_handle2/">2</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle3/">3</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle4/">4</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle5/">5</a></div>
+                    <div class = "pagenum " >...</div>
+                {%elif Pindex == 2%}
+                    <div class = 'pagenum'><a href="/test_task_handle1/">1</a></div>
+                    <div class = "pagenum pagestyle" >2</div>
+                    <div class = 'pagenum'><a href="/test_task_handle3/">3</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle4/">4</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle5/">5</a></div>
+                    <div class = "pagenum " >...</div>
+                {%elif Pindex == plast%}
+                    <div class = "pagenum " >...</div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast|add:-4}}/">{{plast|add:-4}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast|add:-3}}/">{{plast|add:-3}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast|add:-2}}/">{{plast|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast|add:-1}}/">{{plast|add:-1}}</a></div>
+                    <div class = 'pagenum pagestyle'>{{plast}}</div>
+                {%elif Pindex == plast2%}
+                    <div class = "pagenum " >...</div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast2|add:-3}}/">{{plast2|add:-3}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast2|add:-2}}/">{{plast2|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast2|add:-1}}/">{{plast2|add:-1}}</a></div>
+                    <div class = 'pagenum pagestyle'>{{plast2}}</div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{plast2|add:+1}}/">{{plast2|add:+1}}</a></div>
+                {%else%}
+                    {%if Pindex != 3%}
+                        <div class = "pagenum " >...</div>
+                    {%endif%}
+                    <div class = 'pagenum'><a href="/test_task_handle{{Pindex|add:-2}}/">{{Pindex|add:-2}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{Pindex|add:-1}}/">{{Pindex|add:-1}}</a></div>
+                    <div class = 'pagenum pagestyle'><a href="/test_task_handle{{Pindex}}/">{{Pindex}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{Pindex|add:+1}}/">{{Pindex|add:+1}}</a></div>
+                    <div class = 'pagenum'><a href="/test_task_handle{{Pindex|add:+2}}/">{{Pindex|add:+2}}</a></div>
+                    {%if Pindex != plast|add:-2%}
+                        <div class = "pagenum " >...</div>
+                    {%endif%}
+                {%endif%}
+                {%if list.has_next%}
+                    <div class = 'pagenum1'><a href="/test_task_handle{{list.number|add:1}}/">下一页</a></div>
+                    <div class = 'pagenum1'><a href="/test_task_handle{{list.paginator.num_pages}}/">尾 页</a></div>
+                {%endif%}
+            {%else%}
+                {%for pindex in plist%}
+                    {%if Pindex == pindex%}
+                        <div class = "pagenum pagestyle" >{{pindex}}</div>
+                    {%else%}
+                        <div class = 'pagenum'><a href="/test_task_handle{{pindex}}/">{{pindex}}</a></div>
+                    {%endif%}
+                {%endfor%}
+            {%endif%}
+        </div>
+    {%endif%}
+
+<br><br>
+</div>
+
+</body>
+</html>
+{%endblock body%}

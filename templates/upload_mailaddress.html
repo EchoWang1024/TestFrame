@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block head %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>邮箱地址添加</title>
+        <link rel="stylesheet" href="/static/css/uploadmail.css" type="text/css">
+        <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="/static/js/upload_mailaddress.js"></script>
+        <script type="text/javascript" src="/static/js/layer/layer.js"></script>
+        <script>
+            if ('{{valid}}' == '1') {
+                alert('保存成功')
+            }
+            if('{{valid}}' == '2'){
+                alert('邮箱地址已存在')
+            }
+            $(function () {
+                $(".add_layer").click(function () {
+                    layer.open({
+                    type: 1,
+                    area : ['930px' , 'auto'],
+                    content: $('.upld')
+                });
+                });
+            });
+        </script>
+        <link href="/static/css/sidebar.css" rel="stylesheet" href="text/css">
+    </head>
+    <body>
+{% endblock head %}
+
+{% block body %}
+    <div class="ciyao">
+        <h1>邮 箱 地 址 添 加</h1>
+        <hr>
+        <form action="/uploadmail/" method="post" class="upld">
+            <span class="name_text">姓名：</span>
+            <input type="text" class="name" name="namesite" placeholder="请输入姓名"/>
+            <br>
+            <br>
+            <span class="mail_text">邮箱地址：</span>
+            <input type="text" class="mail" name="mailsite" placeholder="请输入邮箱地址"/>&nbsp;
+            <span class="errorinfo"></span>
+            <br> <br>
+            <input type="submit" value="添加" class="subone"><br><br>
+        </form>
+        <br>
+
+        <input type="button" value="点击添加一个邮箱地址" class="add_layer">
+
+        <table border=1>
+            <tr class="table_title">
+                <td class="mname">姓名</td>
+                <td class="mmail">邮箱</td>
+                <td class="mdel">删除邮箱</td>
+            </tr>
+            {% for i in result %}
+                <tr>
+                    <td>{{ i.username }}</td>
+                    <td>{{ i.mailaddress }}</td>
+                    <td><a href="/mail_del/{{ i.username }}" class="del">删除</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    </body>
+    </html>
+{% endblock body %}

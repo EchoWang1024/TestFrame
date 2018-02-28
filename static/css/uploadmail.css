@@ -1,0 +1,112 @@
+        .main ul .l6 a{
+            color:#9EEFF2;
+            font-weight: bold;
+        }
+        a{
+            text-decoration: none;
+        }
+         h1{
+            /*background-color:#E8E7E3;*/
+            color:#28262C;
+            text-align: left;
+             margin:5px 0px 5px 28px;
+            height:50px;
+            line-height: 50px;
+        }
+         hr{
+             margin: 0 auto;
+             border-top: 2px solid black;
+             width: 300px;
+             float:left;
+         }
+        form{
+            margin-left: 30px;
+            position: relative;
+        }
+        .name{
+            width:100px;
+            height:35px;
+            vertical-align:center;
+            border-radius:5px;
+            border: 1px solid #3C3B37;
+            padding-left:10px;
+            margin-left: 20px;
+        }
+        .mail{
+            width:400px;
+            height:35px;
+            vertical-align:center;
+            border-radius:5px;
+            border: 1px solid #3C3B37;
+            padding-left:10px;
+        }
+        .zero{
+            font-size: 30px;
+        }
+        .errorinfo{
+            color:red;
+        }
+        table{
+            border:1px solid gray;
+			border-collapse:collapse;
+			text-align: center;
+            margin-left: 30px;
+		}
+        td{
+            padding:5px;
+        }
+        .mname, .mdel{
+            width:100px;
+        }
+        .mmail{
+            width:600px;
+        }
+        .upld{
+            display: none;
+            margin-top: 50px;
+        }
+        .subone{
+            font-size: 18px;
+            width:150px;
+            height:30px;
+            border-radius:5px;
+            background-color:gray;
+            color:black;
+            vertical-align:center;
+            font-family: "AR PL UKai CN";
+            border:0;
+            outline: none;
+        }
+        .subone:hover{
+            color:white;
+            background-color: black;
+            cursor:pointer;
+        }
+        .table_title{
+            background-color: black;
+            color:white;
+        }
+        .del{
+            color:black
+        }
+        .del:hover{
+            color:red
+        }
+        .add_layer{
+            margin:30px 30px;
+            border:0;
+            outline: none;
+            padding:5px 10px;
+            border-radius: 2px;
+            font-family: "AR PL UKai CN";
+            font-size: 16px;
+
+        }
+        .add_layer:hover{
+            cursor: pointer;
+            color:white;
+            background-color: dimgray;
+        }
+        .name_text{
+            margin-left: 16px;
+        }

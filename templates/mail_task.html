@@ -1,0 +1,139 @@
+{%extends 'base.html'%}
+{%block head%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>邮件任务管理</title>
+    <link href="/static/css/sidebar.css" rel="stylesheet" href="text/css">
+    <link href="/static/css/mailtask.css" rel="stylesheet" href="text/css">
+    <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="/static/js/layer/layer.js"></script>
+    <script>
+        $(function () {
+            $('.asrbtn').click(function () {
+                layer.open({
+                    type: 1,
+                    area : ['930px' , 'auto'],
+                    content: $('.asrframe')
+                });
+            });
+            $('.nlubtn').click(function () {
+                layer.open({
+                    type: 1,
+                    area : ['930px' , 'auto'],
+                    content: $('.nluframe')
+                });
+            });
+            $('.nlpbtn').click(function () {
+                layer.open({
+                    type: 1,
+                    area : ['930px' , 'auto'],
+                    content: $('.nlpframe')
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+{%endblock head%}
+{%block body%}
+<div class="ciyao">
+    <h1>邮 箱 地 址 管 理</h1>
+    <hr>
+    <br>
+    <br>
+    <table border = 1>
+        <tr style="text-align: center">
+            <td class="project" style="background-color: black; color: white;height: 25px;">项目</td>
+            <td class="mail" style="background-color: black; color: white;height: 25px">邮  箱</td>
+        </tr>
+        <tr style="text-align: center">
+            <td>asr</td>
+            <td>
+                <input type="button" class="asrbtn" value="编辑">
+            </td>
+        </tr>
+
+        <tr style="text-align: center">
+            <td>nlu</td>
+            <td>
+                <input type="button" class="nlubtn" value="编辑" >
+            </td>
+        </tr>
+
+        <tr style="text-align: center">
+            <td>nlp</td>
+            <td>
+                <input type="button" class="nlpbtn" value="编辑" >
+            </td>
+        </tr>
+    </table>
+
+    <form action="/mail_task_handle/" class="asrframe" method="post">
+        <input type="text" name='asrname' value="" class="exite">
+        <input type="submit" value="确认" class="add">
+        <table border="1px" class="alltable">
+            <tr>
+                <td>姓名</td>
+                <td>邮箱</td>
+                <td>选中状态</td>
+            </tr>
+            {%for i in result%}
+                <tr>
+                    <td>{{i.username}}</td>
+                    <td>{{i.mailaddress}}</td>
+                    <td><input type="checkbox" name="asrname" {%if i.asr_state == '1'%}
+                           checked=checked{%endif%} value={{i.username}}/>
+                    </td>
+                </tr>
+            {%endfor%}
+        </table>
+    </form>
+
+    <form action="/mail_task_handle/" class="nluframe" method="post">
+        <input type="text" name='nluname' value="" class="exite">
+        <input type="submit" value="确认" class="add">
+        <table border="1px" class="alltable">
+            <tr>
+                <td>姓名</td>
+                <td>邮箱</td>
+                <td>选中状态</td>
+            </tr>
+            {%for i in result%}
+                <tr>
+                    <td>{{i.username}}</td>
+                    <td>{{i.mailaddress}}</td>
+                    <td><input type="checkbox" name="nluname" {%if i.nlu_state == '1'%}
+                           checked=checked{%endif%} value={{i.username}}/>
+                    </td>
+                </tr>
+            {%endfor%}
+        </table>
+    </form>
+
+    <form action="/mail_task_handle/" class="nlpframe" method="post">
+        <input type="text" name='nlpname' value="" class="exite">
+        <input type="submit" value="确认" class="add">
+        <table border="1px" class="alltable">
+            <tr>
+                <td>姓名</td>
+                <td>邮箱</td>
+                <td>选中状态</td>
+            </tr>
+            {%for i in result%}
+                <tr>
+                    <td>{{i.username}}</td>
+                    <td>{{i.mailaddress}}</td>
+                    <td><input type="checkbox" name="nlpname" {%if i.nlp_state == '1'%}
+                           checked=checked{%endif%} value={{i.username}}/>
+                    </td>
+                </tr>
+            {%endfor%}
+        </table>
+    </form>
+
+</div>
+</body>
+</html>
+{%endblock body%}

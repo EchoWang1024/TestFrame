@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block head %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>上 传 文 件</title>
+        <link rel="stylesheet" href="/static/css/uploadcase.css" type="text/css">
+        <link href="/static/css/sidebar.css" rel="stylesheet" href="text/css">
+        <script type="text/javascript" src="/static/js/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript" src="/static/js/uploadcase.js"></script>
+        <script>
+            var valid = '{{prompt}}';
+            if (valid != '') {
+                alert(valid)
+            }
+            if ('{{valid}}' == '1') {
+                alert('已存在同名文件')
+            }
+            $(function () {
+                $(".form1").submit(function () {
+                    if(($(".filename").html().split("."))[1] != "xlsx"){
+                        alert("上传类型错误");
+                        return false;
+                    }
+                    else{
+                        return true;
+                    }
+                })
+            })
+        </script>
+    </head>
+    <body>
+{% endblock head %}
+
+{% block body %}
+    <div class="ciyao">
+        <h1>测 试 用 例 上 传</h1>
+        <hr>
+        <br>
+        <form enctype="multipart/form-data" method="POST" action="/up_load/" id="form_upload" class="form1">
+            <input type="file" name="file" class="file">
+            <br><br>
+            <div>文件名 : <span class="filename" class="filename"></span></div><br>
+            <div>文件大小 : <span class="filesize"></span></div><br>
+            <div>文件类型 : <span class="filetype"></span></div><br>
+            <br>
+            <input type="submit" value="上传文件" class="subone">
+        </form>
+    </div>
+
+    </body>
+    </html>
+{% endblock body %}

@@ -1,0 +1,558 @@
+2018-02-24 11:30:06,529:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 11:30:06,530:INFO: data type:wave[1]
+2018-02-24 11:30:06,530:INFO: data rate:8k[1]
+2018-02-24 11:30:06,530:INFO: data bit:16bit[2]
+2018-02-24 11:30:06,530:INFO: server type:spkem[5] version:3
+2018-02-24 11:30:06,539:INFO: Client[ID:0] create client [0x1ef5690] success
+2018-02-24 11:30:06,540:INFO: Creat Decoder:create the recv thread[1748969216] success
+2018-02-24 11:30:06,540:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 11:30:06,540:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:30:06,540:INFO: Client[ID:0] set state add
+2018-02-24 11:30:06,543:INFO: Client[ID:0]:send pipe socket_id:20 action:state_CLOSE
+2018-02-24 11:30:06,543:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:30:06,543:INFO: Client[ID:0] close server
+2018-02-24 11:30:06,543:INFO: Client[ID:0]:close the connect[20]
+2018-02-24 11:30:06,543:INFO: Client[ID:0]:set client socket_id:20 action:state_CLOSE
+2018-02-24 11:30:06,544:INFO: Client[ID:0]:remove socket_id 20 client[0x1ef5690] status:32
+2018-02-24 11:30:06,544:INFO: Client[ID:0]:send pipe socket_id:20 action:state_REMOVE
+2018-02-24 11:30:06,544:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:30:06,544:INFO: Client[ID:0]:set client socket_id:20 action:state_REMOVE
+2018-02-24 11:30:06,544:INFO: free packet resource
+2018-02-24 11:47:10,727:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 11:47:10,727:INFO: data type:wave[1]
+2018-02-24 11:47:10,727:INFO: data rate:8k[1]
+2018-02-24 11:47:10,727:INFO: data bit:16bit[2]
+2018-02-24 11:47:10,727:INFO: server type:spkem[5] version:3
+2018-02-24 11:47:10,733:INFO: Client[ID:0] create client [0x12eb690] success
+2018-02-24 11:47:10,734:INFO: Creat Decoder:create the recv thread[-999282944] success
+2018-02-24 11:47:10,734:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 11:47:10,734:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:47:10,734:INFO: Client[ID:0] set state add
+2018-02-24 11:47:10,735:INFO: Client[ID:0]:connect the server 192.168.128.61[20] success count:1
+2018-02-24 11:47:10,735:INFO: Client[ID:0]:send pipe socket_id:20 action:state_REQUEST
+2018-02-24 11:47:10,735:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:47:10,736:INFO: Client[ID:0]:set client socket_id:20 action:state_REQUEST
+2018-02-24 11:47:10,736:INFO: Client[ID:0]:send request[44] [wtype:0 wrate:1 wbit:1] log_id:0 send_len:71 errno:0 success
+2018-02-24 11:47:10,736:INFO: Client[ID:0]:waitting for response time_out:1000
+2018-02-24 11:47:10,745:INFO: Client[ID:0]:recv head info head_len:44 cmd:80 errcode:0 recv_len:44
+2018-02-24 11:47:10,745:INFO: Client[ID:0]:select can be read_len:0 bytes
+2018-02-24 11:47:10,745:INFO: Client[ID:0]:set client socket_id:20 action:state_RESPONSE
+2018-02-24 11:47:10,745:INFO: Client[ID:0]:get response packet
+2018-02-24 11:47:10,776:INFO: Client[ID:0]:send pipe socket_id:20 action:state_DATA
+2018-02-24 11:47:10,776:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:47:10,776:INFO: Client[ID:0]:set client socket_id:20 action:state_DATA
+2018-02-24 11:47:10,776:INFO: Client[ID:0]:send data buffer_len:128 send_len:172 errno:0
+2018-02-24 11:47:43,246:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:47:43,246:INFO: Client[ID:0]:send pipe socket_id:20 action:state_FINISH
+2018-02-24 11:47:43,246:INFO: Client[ID:0]:set client socket_id:20 action:state_FINISH
+2018-02-24 11:47:43,246:INFO: Client[ID:0]:send finish[44] [cmd:3] log_id:0 send_len:44 errno:0 success
+2018-02-24 11:47:49,728:INFO: Client[ID:0]:recv head info head_len:44 cmd:4 errcode:1 recv_len:44
+2018-02-24 11:47:49,728:INFO: Client[ID:0]:select can be read_len:1330 bytes
+2018-02-24 11:47:49,728:INFO: Client[ID:0]:rec data rbytes:1330 bytes client_len:0 bytes body_len:18552 bytes
+2018-02-24 11:47:49,729:INFO: Client[ID:0]:select can be read_len:12366 bytes
+2018-02-24 11:47:49,729:INFO: Client[ID:0]:rec data rbytes:12366 bytes client_len:1330 bytes body_len:18552 bytes
+2018-02-24 11:47:49,729:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 11:47:49,730:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 11:47:49,730:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:13696 bytes body_len:18552 bytes
+2018-02-24 11:47:49,730:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 11:47:49,730:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 11:47:49,730:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:15070 bytes body_len:18552 bytes
+2018-02-24 11:47:49,730:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 11:47:49,731:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 11:47:49,731:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:16444 bytes body_len:18552 bytes
+2018-02-24 11:47:49,731:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 11:47:49,731:INFO: Client[ID:0]:select can be read_len:734 bytes
+2018-02-24 11:47:49,731:INFO: Client[ID:0]:rec data rbytes:734 bytes client_len:17818 bytes body_len:18552 bytes
+2018-02-24 11:47:49,731:INFO: Client[ID:0]:rec data 1_len:18552 bytes body_len:18552 bytes
+2018-02-24 11:47:50,547:INFO: Client[ID:0]:recv head info head_len:44 cmd:0 errcode:0 recv_len:0
+2018-02-24 11:47:50,547:INFO: Client[ID:0]:set state state_no_data
+2018-02-24 11:47:50,547:INFO: Client[ID:0]:close the connect[20]
+2018-02-24 11:47:50,547:INFO: Client[ID:0]:set client socket_id:20 action:state_CLOSE
+2018-02-24 11:47:50,547:INFO: Client[ID:0]:remove socket_id 20 client[0x12eb690] status:255
+2018-02-24 11:47:50,547:INFO: Client[ID:0]:send pipe socket_id:20 action:state_REMOVE
+2018-02-24 11:47:50,547:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:47:50,547:INFO: Client[ID:0]:set client socket_id:20 action:state_REMOVE
+2018-02-24 11:47:50,547:INFO: free packet resource
+2018-02-24 11:54:03,514:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 11:54:03,514:INFO: data type:wave[1]
+2018-02-24 11:54:03,514:INFO: data rate:8k[1]
+2018-02-24 11:54:03,514:INFO: data bit:16bit[2]
+2018-02-24 11:54:03,514:INFO: server type:spkem[5] version:3
+2018-02-24 11:54:03,523:INFO: Client[ID:0] create client [0x18ab690] success
+2018-02-24 11:54:03,523:INFO: Creat Decoder:create the recv thread[-529836288] success
+2018-02-24 11:54:03,523:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 11:54:03,523:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:54:03,523:INFO: Client[ID:0] set state add
+2018-02-24 11:54:03,526:INFO: Client[ID:0]:connect the server 192.168.128.61[20] success count:1
+2018-02-24 11:54:03,526:INFO: Client[ID:0]:send pipe socket_id:20 action:state_REQUEST
+2018-02-24 11:54:03,526:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:54:03,526:INFO: Client[ID:0]:set client socket_id:20 action:state_REQUEST
+2018-02-24 11:54:03,526:INFO: Client[ID:0]:send request[44] [wtype:0 wrate:1 wbit:1] log_id:0 send_len:71 errno:0 success
+2018-02-24 11:54:03,526:INFO: Client[ID:0]:waitting for response time_out:1000
+2018-02-24 11:54:04,415:INFO: Client[ID:0]:recv head info head_len:44 cmd:80 errcode:0 recv_len:44
+2018-02-24 11:54:04,415:INFO: Client[ID:0]:select can be read_len:0 bytes
+2018-02-24 11:54:04,415:INFO: Client[ID:0]:set client socket_id:20 action:state_RESPONSE
+2018-02-24 11:54:04,415:INFO: Client[ID:0]:get response packet
+2018-02-24 11:54:04,415:INFO: Client[ID:0]:send pipe socket_id:20 action:state_DATA
+2018-02-24 11:54:04,415:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:54:04,416:INFO: Client[ID:0]:set client socket_id:20 action:state_DATA
+2018-02-24 11:54:04,416:INFO: Client[ID:0]:send data buffer_len:128 send_len:172 errno:0
+2018-02-24 11:54:07,900:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 11:54:07,900:INFO: data type:wave[1]
+2018-02-24 11:54:07,900:INFO: data rate:8k[1]
+2018-02-24 11:54:07,900:INFO: data bit:16bit[2]
+2018-02-24 11:54:07,900:INFO: server type:spkem[5] version:3
+2018-02-24 11:54:07,902:INFO: Client[ID:0] create client [0x1914690] success
+2018-02-24 11:54:07,902:INFO: Creat Decoder:create the recv thread[-625187072] success
+2018-02-24 11:54:07,902:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 11:54:07,902:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:54:07,902:INFO: Client[ID:0] set state add
+2018-02-24 11:54:07,904:INFO: Client[ID:0]:connect the server 192.168.128.61[24] success count:1
+2018-02-24 11:54:07,904:INFO: Client[ID:0]:send pipe socket_id:24 action:state_REQUEST
+2018-02-24 11:54:07,904:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:54:07,904:INFO: Client[ID:0]:set client socket_id:24 action:state_REQUEST
+2018-02-24 11:54:07,904:INFO: Client[ID:0]:send request[44] [wtype:0 wrate:1 wbit:1] log_id:0 send_len:71 errno:0 success
+2018-02-24 11:54:07,904:INFO: Client[ID:0]:waitting for response time_out:1000
+2018-02-24 11:54:15,505:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 11:54:15,505:INFO: data type:wave[1]
+2018-02-24 11:54:15,505:INFO: data rate:8k[1]
+2018-02-24 11:54:15,505:INFO: data bit:16bit[2]
+2018-02-24 11:54:15,505:INFO: server type:spkem[5] version:3
+2018-02-24 11:54:15,507:INFO: Client[ID:0] create client [0x1138690] success
+2018-02-24 11:54:15,507:INFO: Creat Decoder:create the recv thread[-65222912] success
+2018-02-24 11:54:15,507:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 11:54:15,507:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:54:15,507:INFO: Client[ID:0] set state add
+2018-02-24 11:54:15,509:INFO: Client[ID:0]:connect the server 192.168.128.61[32] success count:1
+2018-02-24 11:54:15,509:INFO: Client[ID:0]:send pipe socket_id:32 action:state_REQUEST
+2018-02-24 11:54:15,509:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:54:15,509:INFO: Client[ID:0]:set client socket_id:32 action:state_REQUEST
+2018-02-24 11:54:15,509:INFO: Client[ID:0]:send request[44] [wtype:0 wrate:1 wbit:1] log_id:0 send_len:71 errno:0 success
+2018-02-24 11:54:15,509:INFO: Client[ID:0]:waitting for response time_out:1000
+2018-02-24 11:55:13,496:INFO: Client[ID:0]:send pipe socket_id:20 action:state_FINISH
+2018-02-24 11:55:13,496:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:55:13,496:INFO: Client[ID:0]:set client socket_id:20 action:state_FINISH
+2018-02-24 11:55:13,496:INFO: Client[ID:0]:send finish[44] [cmd:3] log_id:0 send_len:44 errno:0 success
+2018-02-24 11:55:23,063:INFO: Client[ID:0]:recv head info head_len:44 cmd:4 errcode:1 recv_len:44
+2018-02-24 11:55:23,063:INFO: Client[ID:0]:select can be read_len:1330 bytes
+2018-02-24 11:55:23,063:INFO: Client[ID:0]:rec data rbytes:1330 bytes client_len:0 bytes body_len:18552 bytes
+2018-02-24 11:55:23,064:INFO: Client[ID:0]:select can be read_len:12366 bytes
+2018-02-24 11:55:23,064:INFO: Client[ID:0]:rec data rbytes:12366 bytes client_len:1330 bytes body_len:18552 bytes
+2018-02-24 11:55:23,064:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 11:55:23,065:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 11:55:23,065:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:13696 bytes body_len:18552 bytes
+2018-02-24 11:55:23,065:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 11:55:23,065:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 11:55:23,065:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:15070 bytes body_len:18552 bytes
+2018-02-24 11:55:23,065:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 11:55:23,066:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 11:55:23,066:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:16444 bytes body_len:18552 bytes
+2018-02-24 11:55:23,066:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 11:55:23,067:INFO: Client[ID:0]:select can be read_len:734 bytes
+2018-02-24 11:55:23,067:INFO: Client[ID:0]:rec data rbytes:734 bytes client_len:17818 bytes body_len:18552 bytes
+2018-02-24 11:55:23,067:INFO: Client[ID:0]:rec data 1_len:18552 bytes body_len:18552 bytes
+2018-02-24 11:55:23,831:INFO: Client[ID:0]:recv head info head_len:44 cmd:0 errcode:0 recv_len:0
+2018-02-24 11:55:23,831:INFO: Client[ID:0]:set state state_no_data
+2018-02-24 11:55:23,832:INFO: Client[ID:0]:close the connect[20]
+2018-02-24 11:55:23,832:INFO: Client[ID:0]:set client socket_id:20 action:state_CLOSE
+2018-02-24 11:55:23,832:INFO: Client[ID:0]:remove socket_id 20 client[0x18ab690] status:255
+2018-02-24 11:55:23,832:INFO: Client[ID:0]:send pipe socket_id:20 action:state_REMOVE
+2018-02-24 11:55:23,832:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:55:23,832:INFO: Client[ID:0]:set client socket_id:20 action:state_REMOVE
+2018-02-24 11:55:23,832:INFO: free packet resource
+2018-02-24 11:55:23,841:INFO: Client[ID:0]:recv head info head_len:44 cmd:80 errcode:0 recv_len:44
+2018-02-24 11:55:23,841:INFO: Client[ID:0]:select can be read_len:0 bytes
+2018-02-24 11:55:23,841:INFO: Client[ID:0]:set client socket_id:24 action:state_RESPONSE
+2018-02-24 11:55:23,841:INFO: Client[ID:0]:get response packet
+2018-02-24 11:55:23,841:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:55:23,841:INFO: Client[ID:0]:send pipe socket_id:24 action:state_DATA
+2018-02-24 11:55:23,841:INFO: Client[ID:0]:set client socket_id:24 action:state_DATA
+2018-02-24 11:55:23,841:INFO: Client[ID:0]:send data buffer_len:128 send_len:172 errno:0
+2018-02-24 11:55:39,544:INFO: Client[ID:0]:recv head info head_len:44 cmd:0 errcode:0 recv_len:-1
+2018-02-24 11:55:39,544:INFO: Client[ID:0]:set state state_no_data
+2018-02-24 11:55:39,544:INFO: Client[ID:0]:close the connect[32]
+2018-02-24 11:55:39,544:INFO: Client[ID:0]:set client socket_id:32 action:state_CLOSE
+2018-02-24 11:55:39,544:INFO: Client[ID:0]:remove socket_id 32 client[0x1138690] status:255
+2018-02-24 11:55:39,544:INFO: Client[ID:0]:send pipe socket_id:32 action:state_REMOVE
+2018-02-24 11:55:39,544:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:55:39,544:INFO: Client[ID:0]:set client socket_id:32 action:state_REMOVE
+2018-02-24 11:55:39,544:INFO: free packet resource
+2018-02-24 11:55:39,545:INFO: Client[ID:0]:recv head info head_len:44 cmd:0 errcode:0 recv_len:-1
+2018-02-24 11:55:39,545:INFO: Client[ID:0]:set state state_no_data
+2018-02-24 11:55:39,545:INFO: Client[ID:0]:close the connect[24]
+2018-02-24 11:55:39,545:INFO: Client[ID:0]:set client socket_id:24 action:state_CLOSE
+2018-02-24 11:55:39,545:INFO: Client[ID:0]:remove socket_id 24 client[0x1914690] status:27
+2018-02-24 11:55:39,545:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:55:39,545:INFO: Client[ID:0]:send pipe socket_id:24 action:state_REMOVE
+2018-02-24 11:55:39,545:INFO: Client[ID:0]:set client socket_id:24 action:state_REMOVE
+2018-02-24 11:55:39,545:INFO: free packet resource
+2018-02-24 11:55:46,837:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 11:55:46,837:INFO: data type:wave[1]
+2018-02-24 11:55:46,837:INFO: data rate:8k[1]
+2018-02-24 11:55:46,837:INFO: data bit:16bit[2]
+2018-02-24 11:55:46,837:INFO: server type:spkem[5] version:3
+2018-02-24 11:55:46,845:INFO: Client[ID:0] create client [0x1971690] success
+2018-02-24 11:55:46,846:INFO: Creat Decoder:create the recv thread[-1554209024] success
+2018-02-24 11:55:46,846:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 11:55:46,846:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:55:46,846:INFO: Client[ID:0] set state add
+2018-02-24 11:55:46,848:INFO: Client[ID:0]:connect the server 192.168.128.61[19] success count:1
+2018-02-24 11:55:46,848:INFO: Client[ID:0]:send pipe socket_id:19 action:state_REQUEST
+2018-02-24 11:55:46,848:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:55:46,848:INFO: Client[ID:0]:set client socket_id:19 action:state_REQUEST
+2018-02-24 11:55:46,849:INFO: Client[ID:0]:send request[44] [wtype:0 wrate:1 wbit:1] log_id:0 send_len:71 errno:0 success
+2018-02-24 11:55:46,849:INFO: Client[ID:0]:waitting for response time_out:1000
+2018-02-24 11:55:47,743:INFO: Client[ID:0]:recv head info head_len:44 cmd:80 errcode:0 recv_len:44
+2018-02-24 11:55:47,743:INFO: Client[ID:0]:select can be read_len:0 bytes
+2018-02-24 11:55:47,743:INFO: Client[ID:0]:set client socket_id:19 action:state_RESPONSE
+2018-02-24 11:55:47,743:INFO: Client[ID:0]:send pipe socket_id:19 action:state_DATA
+2018-02-24 11:55:47,743:INFO: Client[ID:0]:get response packet
+2018-02-24 11:55:47,744:INFO: pipe read lens[1] data lens[12]
+2018-02-24 11:55:47,744:INFO: Client[ID:0]:set client socket_id:19 action:state_DATA
+2018-02-24 11:55:47,744:INFO: Client[ID:0]:send data buffer_len:128 send_len:172 errno:0
+2018-02-24 14:01:39,906:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 14:01:39,907:INFO: data type:wave[1]
+2018-02-24 14:01:39,907:INFO: data rate:8k[1]
+2018-02-24 14:01:39,907:INFO: data bit:16bit[2]
+2018-02-24 14:01:39,907:INFO: server type:spkem[5] version:3
+2018-02-24 14:01:39,916:INFO: Client[ID:0] create client [0x110b690] success
+2018-02-24 14:01:39,916:INFO: Creat Decoder:create the recv thread[160794368] success
+2018-02-24 14:01:39,916:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 14:01:39,916:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:01:39,916:INFO: Client[ID:0] set state add
+2018-02-24 14:01:39,917:INFO: Client[ID:0]:send pipe socket_id:24 action:state_CLOSE
+2018-02-24 14:01:39,917:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:01:39,918:INFO: Client[ID:0] close server
+2018-02-24 14:01:39,918:INFO: Client[ID:0]:close the connect[24]
+2018-02-24 14:01:39,918:INFO: Client[ID:0]:set client socket_id:24 action:state_CLOSE
+2018-02-24 14:01:39,918:INFO: Client[ID:0]:remove socket_id 24 client[0x110b690] status:32
+2018-02-24 14:01:39,918:INFO: Client[ID:0]:send pipe socket_id:24 action:state_REMOVE
+2018-02-24 14:01:39,918:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:01:39,918:INFO: Client[ID:0]:set client socket_id:24 action:state_REMOVE
+2018-02-24 14:01:39,918:INFO: free packet resource
+2018-02-24 14:02:53,122:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 14:02:53,123:INFO: data type:wave[1]
+2018-02-24 14:02:53,123:INFO: data rate:8k[1]
+2018-02-24 14:02:53,123:INFO: data bit:16bit[2]
+2018-02-24 14:02:53,123:INFO: server type:spkem[5] version:3
+2018-02-24 14:02:53,132:INFO: Client[ID:0] create client [0x9e0690] success
+2018-02-24 14:02:53,132:INFO: Creat Decoder:create the recv thread[941111040] success
+2018-02-24 14:02:53,132:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 14:02:53,132:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:02:53,132:INFO: Client[ID:0] set state add
+2018-02-24 14:02:53,134:INFO: Client[ID:0]:send pipe socket_id:20 action:state_CLOSE
+2018-02-24 14:02:53,134:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:02:53,134:INFO: Client[ID:0] close server
+2018-02-24 14:02:53,134:INFO: Client[ID:0]:close the connect[20]
+2018-02-24 14:02:53,134:INFO: Client[ID:0]:set client socket_id:20 action:state_CLOSE
+2018-02-24 14:02:53,134:INFO: Client[ID:0]:remove socket_id 20 client[0x9e0690] status:32
+2018-02-24 14:02:53,135:INFO: Client[ID:0]:send pipe socket_id:20 action:state_REMOVE
+2018-02-24 14:02:53,135:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:02:53,135:INFO: Client[ID:0]:set client socket_id:20 action:state_REMOVE
+2018-02-24 14:02:53,135:INFO: free packet resource
+2018-02-24 14:16:52,321:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 14:16:52,321:INFO: data type:wave[1]
+2018-02-24 14:16:52,321:INFO: data rate:8k[1]
+2018-02-24 14:16:52,321:INFO: data bit:16bit[2]
+2018-02-24 14:16:52,321:INFO: server type:spkem[5] version:3
+2018-02-24 14:16:52,330:INFO: Client[ID:0] create client [0x1691690] success
+2018-02-24 14:16:52,330:INFO: Creat Decoder:create the recv thread[-475875584] success
+2018-02-24 14:16:52,330:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 14:16:52,330:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:16:52,330:INFO: Client[ID:0] set state add
+2018-02-24 14:16:52,333:INFO: Client[ID:0]:connect the server 192.168.128.61[20] success count:1
+2018-02-24 14:16:52,334:INFO: Client[ID:0]:send pipe socket_id:20 action:state_REQUEST
+2018-02-24 14:16:52,334:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:16:52,334:INFO: Client[ID:0]:set client socket_id:20 action:state_REQUEST
+2018-02-24 14:16:52,334:INFO: Client[ID:0]:send request[44] [wtype:0 wrate:1 wbit:1] log_id:0 send_len:71 errno:0 success
+2018-02-24 14:16:52,334:INFO: Client[ID:0]:waitting for response time_out:1000
+2018-02-24 14:16:53,752:INFO: Client[ID:0]:recv head info head_len:44 cmd:80 errcode:0 recv_len:44
+2018-02-24 14:16:53,752:INFO: Client[ID:0]:select can be read_len:0 bytes
+2018-02-24 14:16:53,752:INFO: Client[ID:0]:set client socket_id:20 action:state_RESPONSE
+2018-02-24 14:16:53,752:INFO: Client[ID:0]:get response packet
+2018-02-24 14:16:53,753:INFO: Client[ID:0]:send pipe socket_id:20 action:state_DATA
+2018-02-24 14:16:53,753:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:16:53,753:INFO: Client[ID:0]:set client socket_id:20 action:state_DATA
+2018-02-24 14:16:53,753:INFO: Client[ID:0]:send data buffer_len:128 send_len:172 errno:0
+2018-02-24 14:18:04,035:INFO: Client[ID:0]:send pipe socket_id:20 action:state_FINISH
+2018-02-24 14:18:04,035:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:18:04,035:INFO: Client[ID:0]:set client socket_id:20 action:state_FINISH
+2018-02-24 14:18:04,035:INFO: Client[ID:0]:send finish[44] [cmd:3] log_id:0 send_len:44 errno:0 success
+2018-02-24 14:18:11,567:INFO: Client[ID:0]:recv head info head_len:44 cmd:4 errcode:1 recv_len:44
+2018-02-24 14:18:11,567:INFO: Client[ID:0]:select can be read_len:1330 bytes
+2018-02-24 14:18:11,567:INFO: Client[ID:0]:rec data rbytes:1330 bytes client_len:0 bytes body_len:18552 bytes
+2018-02-24 14:18:11,567:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:18:11,567:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:1330 bytes body_len:18552 bytes
+2018-02-24 14:18:11,567:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:18:11,568:INFO: Client[ID:0]:select can be read_len:10992 bytes
+2018-02-24 14:18:11,568:INFO: Client[ID:0]:rec data rbytes:10992 bytes client_len:2704 bytes body_len:18552 bytes
+2018-02-24 14:18:11,568:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:18:11,569:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:18:11,569:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:13696 bytes body_len:18552 bytes
+2018-02-24 14:18:11,569:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:18:11,569:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:18:11,569:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:15070 bytes body_len:18552 bytes
+2018-02-24 14:18:11,569:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:18:11,570:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:18:11,570:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:16444 bytes body_len:18552 bytes
+2018-02-24 14:18:11,570:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:18:11,571:INFO: Client[ID:0]:select can be read_len:734 bytes
+2018-02-24 14:18:11,571:INFO: Client[ID:0]:rec data rbytes:734 bytes client_len:17818 bytes body_len:18552 bytes
+2018-02-24 14:18:11,571:INFO: Client[ID:0]:rec data 1_len:18552 bytes body_len:18552 bytes
+2018-02-24 14:18:12,386:INFO: Client[ID:0]:recv head info head_len:44 cmd:0 errcode:0 recv_len:0
+2018-02-24 14:18:12,386:INFO: Client[ID:0]:set state state_no_data
+2018-02-24 14:18:12,386:INFO: Client[ID:0]:close the connect[20]
+2018-02-24 14:18:12,386:INFO: Client[ID:0]:set client socket_id:20 action:state_CLOSE
+2018-02-24 14:18:12,386:INFO: Client[ID:0]:remove socket_id 20 client[0x1691690] status:255
+2018-02-24 14:18:12,386:INFO: Client[ID:0]:send pipe socket_id:20 action:state_REMOVE
+2018-02-24 14:18:12,386:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:18:12,386:INFO: Client[ID:0]:set client socket_id:20 action:state_REMOVE
+2018-02-24 14:18:12,386:INFO: free packet resource
+2018-02-24 14:19:06,411:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 14:19:06,412:INFO: data type:wave[1]
+2018-02-24 14:19:06,412:INFO: data rate:8k[1]
+2018-02-24 14:19:06,412:INFO: data bit:16bit[2]
+2018-02-24 14:19:06,412:INFO: server type:spkem[5] version:3
+2018-02-24 14:19:06,420:INFO: Client[ID:0] create client [0x1e72690] success
+2018-02-24 14:19:06,420:INFO: Creat Decoder:create the recv thread[-1678326016] success
+2018-02-24 14:19:06,421:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 14:19:06,421:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:19:06,421:INFO: Client[ID:0] set state add
+2018-02-24 14:19:06,424:INFO: Client[ID:0]:connect the server 192.168.128.61[21] success count:1
+2018-02-24 14:19:06,424:INFO: Client[ID:0]:send pipe socket_id:21 action:state_REQUEST
+2018-02-24 14:19:06,424:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:19:06,424:INFO: Client[ID:0]:set client socket_id:21 action:state_REQUEST
+2018-02-24 14:19:06,424:INFO: Client[ID:0]:send request[44] [wtype:0 wrate:1 wbit:1] log_id:0 send_len:71 errno:0 success
+2018-02-24 14:19:06,424:INFO: Client[ID:0]:waitting for response time_out:1000
+2018-02-24 14:19:07,070:INFO: Client[ID:0]:recv head info head_len:44 cmd:80 errcode:0 recv_len:44
+2018-02-24 14:19:07,070:INFO: Client[ID:0]:select can be read_len:0 bytes
+2018-02-24 14:19:07,070:INFO: Client[ID:0]:set client socket_id:21 action:state_RESPONSE
+2018-02-24 14:19:07,070:INFO: Client[ID:0]:get response packet
+2018-02-24 14:19:07,071:INFO: Client[ID:0]:send pipe socket_id:21 action:state_DATA
+2018-02-24 14:19:07,071:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:19:07,071:INFO: Client[ID:0]:set client socket_id:21 action:state_DATA
+2018-02-24 14:19:07,071:INFO: Client[ID:0]:send data buffer_len:128 send_len:172 errno:0
+2018-02-24 14:19:13,892:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 14:19:13,892:INFO: data type:wave[1]
+2018-02-24 14:19:13,892:INFO: data rate:8k[1]
+2018-02-24 14:19:13,892:INFO: data bit:16bit[2]
+2018-02-24 14:19:13,892:INFO: server type:spkem[5] version:3
+2018-02-24 14:19:13,894:INFO: Client[ID:0] create client [0x1c0a690] success
+2018-02-24 14:19:13,894:INFO: Creat Decoder:create the recv thread[673793792] success
+2018-02-24 14:19:13,894:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 14:19:13,894:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:19:13,894:INFO: Client[ID:0] set state add
+2018-02-24 14:19:13,896:INFO: Client[ID:0]:connect the server 192.168.128.61[25] success count:1
+2018-02-24 14:19:13,896:INFO: Client[ID:0]:send pipe socket_id:25 action:state_REQUEST
+2018-02-24 14:19:13,896:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:19:13,896:INFO: Client[ID:0]:set client socket_id:25 action:state_REQUEST
+2018-02-24 14:19:13,896:INFO: Client[ID:0]:send request[44] [wtype:0 wrate:1 wbit:1] log_id:0 send_len:71 errno:0 success
+2018-02-24 14:19:13,896:INFO: Client[ID:0]:waitting for response time_out:1000
+2018-02-24 14:19:14,464:INFO: Client[ID:0]:recv head info head_len:44 cmd:80 errcode:0 recv_len:44
+2018-02-24 14:19:14,464:INFO: Client[ID:0]:select can be read_len:0 bytes
+2018-02-24 14:19:14,464:INFO: Client[ID:0]:set client socket_id:25 action:state_RESPONSE
+2018-02-24 14:19:14,464:INFO: Client[ID:0]:get response packet
+2018-02-24 14:19:14,464:INFO: Client[ID:0]:send pipe socket_id:25 action:state_DATA
+2018-02-24 14:19:14,464:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:19:14,464:INFO: Client[ID:0]:set client socket_id:25 action:state_DATA
+2018-02-24 14:19:14,464:INFO: Client[ID:0]:send data buffer_len:128 send_len:172 errno:0
+2018-02-24 14:19:38,437:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:19:38,437:INFO: Client[ID:0]:send pipe socket_id:21 action:state_FINISH
+2018-02-24 14:19:38,437:INFO: Client[ID:0]:set client socket_id:21 action:state_FINISH
+2018-02-24 14:19:38,437:INFO: Client[ID:0]:send finish[44] [cmd:3] log_id:0 send_len:44 errno:0 success
+2018-02-24 14:19:43,520:INFO: Client[ID:0]:recv head info head_len:44 cmd:4 errcode:1 recv_len:44
+2018-02-24 14:19:43,520:INFO: Client[ID:0]:select can be read_len:1330 bytes
+2018-02-24 14:19:43,520:INFO: Client[ID:0]:rec data rbytes:1330 bytes client_len:0 bytes body_len:18552 bytes
+2018-02-24 14:19:43,521:INFO: Client[ID:0]:select can be read_len:6870 bytes
+2018-02-24 14:19:43,521:INFO: Client[ID:0]:rec data rbytes:6870 bytes client_len:1330 bytes body_len:18552 bytes
+2018-02-24 14:19:43,521:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:43,521:INFO: Client[ID:0]:select can be read_len:2748 bytes
+2018-02-24 14:19:43,521:INFO: Client[ID:0]:rec data rbytes:2748 bytes client_len:8200 bytes body_len:18552 bytes
+2018-02-24 14:19:43,521:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:43,521:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:19:43,521:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:10948 bytes body_len:18552 bytes
+2018-02-24 14:19:43,521:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:43,521:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:19:43,521:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:12322 bytes body_len:18552 bytes
+2018-02-24 14:19:43,522:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:43,524:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:19:43,524:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:13696 bytes body_len:18552 bytes
+2018-02-24 14:19:43,524:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:43,525:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:19:43,525:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:15070 bytes body_len:18552 bytes
+2018-02-24 14:19:43,525:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:43,525:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:19:43,525:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:16444 bytes body_len:18552 bytes
+2018-02-24 14:19:43,525:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:43,525:INFO: Client[ID:0]:select can be read_len:734 bytes
+2018-02-24 14:19:43,525:INFO: Client[ID:0]:rec data rbytes:734 bytes client_len:17818 bytes body_len:18552 bytes
+2018-02-24 14:19:43,525:INFO: Client[ID:0]:rec data 1_len:18552 bytes body_len:18552 bytes
+2018-02-24 14:19:44,297:INFO: Client[ID:0]:recv head info head_len:44 cmd:0 errcode:0 recv_len:0
+2018-02-24 14:19:44,297:INFO: Client[ID:0]:set state state_no_data
+2018-02-24 14:19:44,297:INFO: Client[ID:0]:close the connect[21]
+2018-02-24 14:19:44,297:INFO: Client[ID:0]:set client socket_id:21 action:state_CLOSE
+2018-02-24 14:19:44,297:INFO: Client[ID:0]:remove socket_id 21 client[0x1e72690] status:255
+2018-02-24 14:19:44,297:INFO: Client[ID:0]:send pipe socket_id:21 action:state_REMOVE
+2018-02-24 14:19:44,297:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:19:44,297:INFO: Client[ID:0]:set client socket_id:21 action:state_REMOVE
+2018-02-24 14:19:44,297:INFO: free packet resource
+2018-02-24 14:19:44,739:INFO: Client[ID:0]:send pipe socket_id:25 action:state_FINISH
+2018-02-24 14:19:44,739:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:19:44,739:INFO: Client[ID:0]:set client socket_id:25 action:state_FINISH
+2018-02-24 14:19:44,739:INFO: Client[ID:0]:send finish[44] [cmd:3] log_id:0 send_len:44 errno:0 success
+2018-02-24 14:19:49,671:INFO: Client[ID:0]:recv head info head_len:44 cmd:4 errcode:1 recv_len:44
+2018-02-24 14:19:49,671:INFO: Client[ID:0]:select can be read_len:2704 bytes
+2018-02-24 14:19:49,671:INFO: Client[ID:0]:rec data rbytes:2704 bytes client_len:0 bytes body_len:18552 bytes
+2018-02-24 14:19:49,672:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:19:49,672:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:2704 bytes body_len:18552 bytes
+2018-02-24 14:19:49,672:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:49,673:INFO: Client[ID:0]:select can be read_len:9618 bytes
+2018-02-24 14:19:49,673:INFO: Client[ID:0]:rec data rbytes:9618 bytes client_len:4078 bytes body_len:18552 bytes
+2018-02-24 14:19:49,673:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:49,674:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:19:49,674:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:13696 bytes body_len:18552 bytes
+2018-02-24 14:19:49,674:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:49,675:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:19:49,675:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:15070 bytes body_len:18552 bytes
+2018-02-24 14:19:49,675:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:49,676:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:19:49,676:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:16444 bytes body_len:18552 bytes
+2018-02-24 14:19:49,676:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:19:49,676:INFO: Client[ID:0]:select can be read_len:734 bytes
+2018-02-24 14:19:49,676:INFO: Client[ID:0]:rec data rbytes:734 bytes client_len:17818 bytes body_len:18552 bytes
+2018-02-24 14:19:49,676:INFO: Client[ID:0]:rec data 1_len:18552 bytes body_len:18552 bytes
+2018-02-24 14:19:50,489:INFO: Client[ID:0]:recv head info head_len:44 cmd:0 errcode:0 recv_len:0
+2018-02-24 14:19:50,489:INFO: Client[ID:0]:set state state_no_data
+2018-02-24 14:19:50,489:INFO: Client[ID:0]:close the connect[25]
+2018-02-24 14:19:50,489:INFO: Client[ID:0]:set client socket_id:25 action:state_CLOSE
+2018-02-24 14:19:50,489:INFO: Client[ID:0]:remove socket_id 25 client[0x1c0a690] status:255
+2018-02-24 14:19:50,489:INFO: Client[ID:0]:send pipe socket_id:25 action:state_REMOVE
+2018-02-24 14:19:50,489:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:19:50,489:INFO: Client[ID:0]:set client socket_id:25 action:state_REMOVE
+2018-02-24 14:19:50,489:INFO: free packet resource
+2018-02-24 14:20:01,359:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 14:20:01,359:INFO: data type:wave[1]
+2018-02-24 14:20:01,359:INFO: data rate:8k[1]
+2018-02-24 14:20:01,359:INFO: data bit:16bit[2]
+2018-02-24 14:20:01,359:INFO: server type:spkem[5] version:3
+2018-02-24 14:20:01,368:INFO: Client[ID:0] create client [0x21aa690] success
+2018-02-24 14:20:01,368:INFO: Creat Decoder:create the recv thread[-2044004608] success
+2018-02-24 14:20:01,368:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 14:20:01,368:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:20:01,369:INFO: Client[ID:0] set state add
+2018-02-24 14:20:01,371:INFO: Client[ID:0]:connect the server 192.168.128.61[18] success count:1
+2018-02-24 14:20:01,371:INFO: Client[ID:0]:send pipe socket_id:18 action:state_REQUEST
+2018-02-24 14:20:01,371:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:20:01,372:INFO: Client[ID:0]:set client socket_id:18 action:state_REQUEST
+2018-02-24 14:20:01,372:INFO: Client[ID:0]:send request[44] [wtype:0 wrate:1 wbit:1] log_id:0 send_len:71 errno:0 success
+2018-02-24 14:20:01,372:INFO: Client[ID:0]:waitting for response time_out:1000
+2018-02-24 14:20:02,266:INFO: Client[ID:0]:recv head info head_len:44 cmd:80 errcode:0 recv_len:44
+2018-02-24 14:20:02,266:INFO: Client[ID:0]:select can be read_len:0 bytes
+2018-02-24 14:20:02,266:INFO: Client[ID:0]:set client socket_id:18 action:state_RESPONSE
+2018-02-24 14:20:02,266:INFO: Client[ID:0]:get response packet
+2018-02-24 14:20:02,267:INFO: Client[ID:0]:send pipe socket_id:18 action:state_DATA
+2018-02-24 14:20:02,267:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:20:02,267:INFO: Client[ID:0]:set client socket_id:18 action:state_DATA
+2018-02-24 14:20:02,267:INFO: Client[ID:0]:send data buffer_len:128 send_len:172 errno:0
+2018-02-24 14:20:09,334:NOTICE: ==========open logfile[client.log] successfully===========
+
+2018-02-24 14:20:09,335:INFO: data type:wave[1]
+2018-02-24 14:20:09,335:INFO: data rate:8k[1]
+2018-02-24 14:20:09,335:INFO: data bit:16bit[2]
+2018-02-24 14:20:09,335:INFO: server type:spkem[5] version:3
+2018-02-24 14:20:09,336:INFO: Client[ID:0] create client [0x938690] success
+2018-02-24 14:20:09,336:INFO: Creat Decoder:create the recv thread[-591722752] success
+2018-02-24 14:20:09,336:INFO: Client[ID:0]:send pipe socket_id:-1 action:state_ADD
+2018-02-24 14:20:09,336:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:20:09,336:INFO: Client[ID:0] set state add
+2018-02-24 14:20:09,339:INFO: Client[ID:0]:connect the server 192.168.128.61[18] success count:1
+2018-02-24 14:20:09,339:INFO: Client[ID:0]:send pipe socket_id:18 action:state_REQUEST
+2018-02-24 14:20:09,339:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:20:09,339:INFO: Client[ID:0]:set client socket_id:18 action:state_REQUEST
+2018-02-24 14:20:09,339:INFO: Client[ID:0]:send request[44] [wtype:0 wrate:1 wbit:1] log_id:0 send_len:71 errno:0 success
+2018-02-24 14:20:09,339:INFO: Client[ID:0]:waitting for response time_out:1000
+2018-02-24 14:20:09,862:INFO: Client[ID:0]:recv head info head_len:44 cmd:80 errcode:0 recv_len:44
+2018-02-24 14:20:09,862:INFO: Client[ID:0]:select can be read_len:0 bytes
+2018-02-24 14:20:09,862:INFO: Client[ID:0]:set client socket_id:18 action:state_RESPONSE
+2018-02-24 14:20:09,862:INFO: Client[ID:0]:get response packet
+2018-02-24 14:20:09,862:INFO: Client[ID:0]:send pipe socket_id:18 action:state_DATA
+2018-02-24 14:20:09,862:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:20:09,862:INFO: Client[ID:0]:set client socket_id:18 action:state_DATA
+2018-02-24 14:20:09,862:INFO: Client[ID:0]:send data buffer_len:128 send_len:172 errno:0
+2018-02-24 14:20:35,548:INFO: Client[ID:0]:send pipe socket_id:18 action:state_FINISH
+2018-02-24 14:20:35,548:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:20:35,548:INFO: Client[ID:0]:set client socket_id:18 action:state_FINISH
+2018-02-24 14:20:35,548:INFO: Client[ID:0]:send finish[44] [cmd:3] log_id:0 send_len:44 errno:0 success
+2018-02-24 14:20:38,899:INFO: Client[ID:0]:send pipe socket_id:18 action:state_FINISH
+2018-02-24 14:20:38,899:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:20:38,899:INFO: Client[ID:0]:set client socket_id:18 action:state_FINISH
+2018-02-24 14:20:38,899:INFO: Client[ID:0]:send finish[44] [cmd:3] log_id:0 send_len:44 errno:0 success
+2018-02-24 14:20:41,588:INFO: Client[ID:0]:recv head info head_len:44 cmd:4 errcode:1 recv_len:44
+2018-02-24 14:20:41,588:INFO: Client[ID:0]:select can be read_len:1330 bytes
+2018-02-24 14:20:41,588:INFO: Client[ID:0]:rec data rbytes:1330 bytes client_len:0 bytes body_len:18552 bytes
+2018-02-24 14:20:41,589:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:20:41,589:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:1330 bytes body_len:18552 bytes
+2018-02-24 14:20:41,589:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:20:41,589:INFO: Client[ID:0]:select can be read_len:10992 bytes
+2018-02-24 14:20:41,589:INFO: Client[ID:0]:rec data rbytes:10992 bytes client_len:2704 bytes body_len:18552 bytes
+2018-02-24 14:20:41,589:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:20:41,590:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:20:41,590:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:13696 bytes body_len:18552 bytes
+2018-02-24 14:20:41,590:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:20:41,590:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:20:41,590:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:15070 bytes body_len:18552 bytes
+2018-02-24 14:20:41,590:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:20:41,591:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:20:41,591:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:16444 bytes body_len:18552 bytes
+2018-02-24 14:20:41,591:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:20:41,592:INFO: Client[ID:0]:select can be read_len:734 bytes
+2018-02-24 14:20:41,592:INFO: Client[ID:0]:rec data rbytes:734 bytes client_len:17818 bytes body_len:18552 bytes
+2018-02-24 14:20:41,592:INFO: Client[ID:0]:rec data 1_len:18552 bytes body_len:18552 bytes
+2018-02-24 14:20:42,408:INFO: Client[ID:0]:recv head info head_len:44 cmd:0 errcode:0 recv_len:0
+2018-02-24 14:20:42,408:INFO: Client[ID:0]:set state state_no_data
+2018-02-24 14:20:42,408:INFO: Client[ID:0]:close the connect[18]
+2018-02-24 14:20:42,408:INFO: Client[ID:0]:set client socket_id:18 action:state_CLOSE
+2018-02-24 14:20:42,408:INFO: Client[ID:0]:remove socket_id 18 client[0x21aa690] status:255
+2018-02-24 14:20:42,408:INFO: Client[ID:0]:send pipe socket_id:18 action:state_REMOVE
+2018-02-24 14:20:42,408:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:20:42,408:INFO: Client[ID:0]:set client socket_id:18 action:state_REMOVE
+2018-02-24 14:20:42,408:INFO: free packet resource
+2018-02-24 14:20:43,636:INFO: Client[ID:0]:recv head info head_len:44 cmd:4 errcode:1 recv_len:44
+2018-02-24 14:20:43,637:INFO: Client[ID:0]:select can be read_len:1330 bytes
+2018-02-24 14:20:43,637:INFO: Client[ID:0]:rec data rbytes:1330 bytes client_len:0 bytes body_len:18552 bytes
+2018-02-24 14:20:43,638:INFO: Client[ID:0]:select can be read_len:12366 bytes
+2018-02-24 14:20:43,638:INFO: Client[ID:0]:rec data rbytes:12366 bytes client_len:1330 bytes body_len:18552 bytes
+2018-02-24 14:20:43,638:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:20:43,639:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:20:43,639:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:13696 bytes body_len:18552 bytes
+2018-02-24 14:20:43,639:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:20:43,639:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:20:43,639:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:15070 bytes body_len:18552 bytes
+2018-02-24 14:20:43,639:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:20:43,640:INFO: Client[ID:0]:select can be read_len:1374 bytes
+2018-02-24 14:20:43,640:INFO: Client[ID:0]:rec data rbytes:1374 bytes client_len:16444 bytes body_len:18552 bytes
+2018-02-24 14:20:43,640:INFO: Client[ID:0] read data 2 size is not equals
+2018-02-24 14:20:43,640:INFO: Client[ID:0]:select can be read_len:734 bytes
+2018-02-24 14:20:43,640:INFO: Client[ID:0]:rec data rbytes:734 bytes client_len:17818 bytes body_len:18552 bytes
+2018-02-24 14:20:43,640:INFO: Client[ID:0]:rec data 1_len:18552 bytes body_len:18552 bytes
+2018-02-24 14:20:44,456:INFO: Client[ID:0]:recv head info head_len:44 cmd:0 errcode:0 recv_len:0
+2018-02-24 14:20:44,456:INFO: Client[ID:0]:set state state_no_data
+2018-02-24 14:20:44,456:INFO: Client[ID:0]:close the connect[18]
+2018-02-24 14:20:44,456:INFO: Client[ID:0]:set client socket_id:18 action:state_CLOSE
+2018-02-24 14:20:44,456:INFO: Client[ID:0]:remove socket_id 18 client[0x938690] status:255
+2018-02-24 14:20:44,456:INFO: Client[ID:0]:send pipe socket_id:18 action:state_REMOVE
+2018-02-24 14:20:44,456:INFO: pipe read lens[1] data lens[12]
+2018-02-24 14:20:44,456:INFO: Client[ID:0]:set client socket_id:18 action:state_REMOVE
+2018-02-24 14:20:44,456:INFO: free packet resource
